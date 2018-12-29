@@ -1,0 +1,55 @@
+创建项目
+创建模块  <pom>
+web <war> ->WEB-INF ->web.xml
+                                       ->jsp->跳转jsp
+                                       ->index
+@Controller 注解别写错了
+@RequestMapping("页面查找路径)
+类
+@Autowired
+priavte Service
+@RequestMapping("调用方法名")
+方法(参数 Model ) 返回值 String
+   对象   =service.方法.var
+model.addAttribute("字符串1",对象)
+return "页面路径"
+
+service  抽象方法 
+             实体类@Service 
+                       @Transactional
+@Autowired
+private Dao
+方法调用dao
+dao  抽象方法 注解  sql语句
+domain 实体类 get set方法
+util
+查询
+public List<类>findAll()
+select * from 表
+添加
+public int Save(对象)
+insert into 表 values(".",".");
+删除
+public void delete(int id)
+delete from 表 where id=#{id}
+更新
+public void update(int id)
+update 表 set 数据=值,数据=值 where id=#{id};
+
+页面
+<table width="100%" border=1>
+			<c:forEach items="${user}" var="users">
+				<tr>
+				<td>${users.uid}</td>
+				<td>${users.username}</td>
+				<td>${users.password}</td>
+				</tr>
+			</c:forEach>
+		</table>
+
+
+
+
+
+
+
